@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Das Cavernas Lanches | O Sabor da Escuridão</title>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Creepster&family=Montserrat:wght@400;700;900&display=swap');
+
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+
+        body { 
+            font-family: 'Montserrat', sans-serif; 
+            background-color: #0a0a0a; /* Preto profundo */
+            color: #fff; 
+        }
+
+        /* MENU FIXO NO TOPO */
+        header {
+            position: absolute; /* Fica em cima da foto */
+            top: 0;
+            width: 100%;
+            padding: 20px 5%;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            z-index: 1000;
+        }
+
+        .logo { 
+            font-family: 'Creepster', cursive; /* Fonte de terror/monstro */
+            font-size: 32px; 
+            color: #9d00ff; /* Roxo Neon */
+            letter-spacing: 2px;
+            text-shadow: 2px 2px 5px rgba(157, 0, 255, 0.5);
+        }
+
+        nav { display: flex; align-items: center; gap: 20px; }
+        nav a { color: #fff; text-decoration: none; font-size: 14px; font-weight: 700; text-transform: uppercase; transition: 0.3s; }
+        nav a:hover { color: #9d00ff; }
+
+        /* HERO SECTION (A FOTO GIGANTE) */
+        .hero {
+            height: 100vh; 
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: flex-start; /* Texto na esquerda, igual os sites tops */
+            padding: 0 10%;
+            /* Imagem de fundo escura de hambúrguer artesanal */
+            background: linear-gradient(to right, rgba(0,0,0,0.9) 20%, rgba(0,0,0,0.4) 100%), url('https://images.unsplash.com/photo-1550547660-d9450f859349?ixlib=rb-4.0.3&auto=format&fit=crop&w=1920&q=80');
+            background-size: cover;
+            background-position: center;
+        }
+
+        .hero h1 {
+            font-size: 65px; 
+            font-weight: 900;
+            line-height: 1.1;
+            text-transform: uppercase;
+            max-width: 700px;
+            margin-bottom: 20px;
+        }
+
+        .hero h1 span {
+            color: #9d00ff; /* Roxo Neon */
+            text-shadow: 0 0 15px rgba(157, 0, 255, 0.8); /* Efeito de brilho */
+        }
+
+        .hero p { 
+            font-size: 18px; 
+            margin-bottom: 40px; 
+            max-width: 500px; 
+            color: #ccc; 
+        }
+
+        .btn-principal {
+            background-color: #9d00ff; 
+            color: #fff;
+            padding: 18px 45px;
+            text-decoration: none;
+            font-weight: 900;
+            font-size: 16px;
+            text-transform: uppercase;
+            border-radius: 5px;
+            transition: 0.3s;
+            box-shadow: 0 0 20px rgba(157, 0, 255, 0.4); /* Sombra roxa */
+        }
+
+        .btn-principal:hover { 
+            background-color: #7a00c9; 
+            transform: scale(1.05); 
+        }
+
+        /* SEÇÃO DE DESTAQUES */
+        .section { 
+            padding: 100px 10%; 
+            background-color: #111; 
+            text-align: center; 
+        }
+        
+        .section h2 { 
+            font-family: 'Creepster', cursive;
+            font-size: 45px; 
+            margin-bottom: 40px; 
+            color: #fff; 
+            letter-spacing: 2px;
+        }
+
+        .grid-produtos { 
+            display: grid; 
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); 
+            gap: 30px; 
+        }
+        
+        .card {
+            background: #1a1a1a;
+            padding: 30px;
+            border-radius: 10px;
+            border: 1px solid #333;
+            transition: 0.3s;
+        }
+        .card:hover {
+            border-color: #9d00ff;
+            transform: translateY(-5px);
+        }
+        
+        .card h3 { font-size: 22px; margin-bottom: 10px; color: #9d00ff; }
+        .card p { color: #999; font-size: 14px; }
+
+        footer { text-align: center; padding: 30px; background: #000; color: #555; font-size: 12px; }
+
+        /* RESPONSIVIDADE PARA CELULAR */
+        @media (max-width: 768px) {
+            .hero h1 { font-size: 40px; }
+            nav { display: none; } /* Esconde o menu no celular */
+            .hero { padding: 0 5%; align-items: center; text-align: center; }
+            .btn-principal { width: 100%; text-align: center; }
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <div class="logo">Das Cavernas</div>
+        <nav>
+            <a href="#cardapio">Cardápio</a>
+            <a href="#contato">Contato</a>
+        </nav>
+    </header>
+
+    <section class="hero">
+        <h1>O Sabor da <br> <span>Escuridão</span>.</h1>
+        <p>Hambúrgueres artesanais monstruosos, feitos na chapa e com ingredientes de outro mundo. Entre na caverna.</p>
+        <a href="https://wa.me/5547992334700" class="btn-principal" target="_blank">Fazer Pedido</a>
+    </section>
+
+    <section class="section" id="cardapio">
+        <h2>Nossas Monstruosidades</h2>
+        <div class="grid-produtos">
+            <div class="card">
+                <h3>O Abismo</h3>
+                <p>Blend 180g, cheddar duplo, bacon crocante e molho secreto da caverna.</p>
+            </div>
+            <div class="card">
+                <h3>Presas de Fogo</h3>
+                <p>Blend 180g, queijo pepper jack, jalapeños e cebola caramelizada.</p>
+            </div>
+            <div class="card">
+                <h3>Batata da Caverna</h3>
+                <p>Porção de batatas rústicas com cheddar cremoso e farofa de bacon.</p>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <p>&copy; 2024 Das Cavernas Lanches. Todos os direitos reservados.</p>
+        <p>📍 Rua Guido Zimermann, 5157 - Joinville</p>
+    </footer>
+</body>
+</html>
